@@ -22,7 +22,7 @@ steps:
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'RWE Healthcare AI Services (bf9d5eae-bb3f-4a40-8b38-d61b8c8c0b70)'
-    scriptType: 'ps'
+    scriptType: 'pscore'
     scriptLocation: 'inlineScript'
     inlineScript: 'az storage blob download --container-name blobcontainer --file default.json --name "default.json" --account-key ${env:STORAGE_ACCOUNT_KEY}  --account-name nofandytestacct'
 
